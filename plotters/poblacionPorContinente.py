@@ -7,7 +7,7 @@ grouped1 = gapminder.groupby(['year', 'continent'])['pop'].sum().reset_index()
 def plot():
     figura = (
        so.Plot(data=grouped1, x='year', y='pop', color='continent')
-        )
+        
         .add(so.Bar(), so.Dodge())
 
         .label(
